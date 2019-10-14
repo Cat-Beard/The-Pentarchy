@@ -1,0 +1,78 @@
+ideas = {
+
+	#country = {
+	#	idol_of_boreas_lost = {
+#
+	#		modifier = {
+	#			stability_factor = -0.3
+	#		}
+	#	}
+	#}
+	#country = {
+	#	kingdom_with_no_king = {
+#
+	#		modifier = {
+	#			stability_factor = -0.1
+	#			political_power_gain = -0.05
+	#		}
+	#	}
+	#}
+	#country = {
+	#	home_of_the_griffons = {
+#
+	#		modifier = {
+	#			stability_factor = 0.1
+	#		}
+	#	}
+	#}
+
+	########## WIP Ideas
+	country = {
+		idol_of_boreas_lost = {
+
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+	}
+	country = {
+		The_Pentarchy = {
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+	}
+	country = {
+		home_of_the_griffons = {
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+	}
+
+	political_advisor = {
+		Shadowninjaman11 = {
+			picture = Shadowninjaman11
+			allowed = {
+				original_tag = BOI
+			}
+			available = {
+
+			}
+			traits = { deranged war_industrialist }
+		}
+		#greta = {
+		#	picture = greta
+		#	allowed = {
+		#		original_tag = BOI
+		#	}
+		#	available = {
+		#
+		#	}
+		#	traits = { silent_workgriffon }
+		#}
+	}
+}

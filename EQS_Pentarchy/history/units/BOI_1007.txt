@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "Pentarchy Infantry Division"			#Infantry Division - kek
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Pentarchy Elite Division"			
+
+	regiments = {
+		knights = { x = 0 y = 0 }
+		knights = { x = 0 y = 1 }
+		knights = { x = 0 y = 2 }
+		knights = { x = 0 y = 3 }
+		knights = { x = 0 y = 4 }
+		knights = { x = 1 y = 0 }
+		knights = { x = 1 y = 1 }
+		knights = { x = 1 y = 2 }
+		knights = { x = 1 y = 3 }
+		knights = { x = 1 y = 4 }
+
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Garrison Division"
+
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Mountaineer Division"
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "CatBeard's Loyal Followers"
+		location = 1087
+		division_template = "Pentarchy Elite Division"
+		start_experience_factor = 1.0 }
+	division = {
+		name = "Alter's Loyal Followers"
+		location = 12299
+		division_template = "Pentarchy Elite Division"
+		start_experience_factor = 1.0 }
+	division = {
+		name = "Hotroman's Loyal Followers"
+		location = 4696
+		division_template = "Pentarchy Elite Division"
+		start_experience_factor = 1.0 }
+	division = {
+		name = "Lunar_Explorator's Loyal Followers"
+		location = 1580
+		division_template = "Pentarchy Elite Division"
+		start_experience_factor = 1.0 }
+	division = {
+		name = "Shadowninjaman11's Loyal Followers"
+		location = 753
+		division_template = "Pentarchy Elite Division"
+		start_experience_factor = 1.0 }
+}

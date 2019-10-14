@@ -1,0 +1,174 @@
+﻿capital = 389
+oob = "BOI_1007"
+set_research_slots = 4
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	pre_gw_artillery = 1
+	tech_mountaineers = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 69 #nice
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { ################## Figure these out
+	#home_of_the_griffons
+	#outdated_industry
+	#idol_of_boreas_lost
+	#kingdom_with_no_king
+	#lack_of_scientists
+	#poverty
+	The_Pentarchy
+	home_of_the_griffons
+	idol_of_boreas_lost
+}
+
+set_stability = 0.75
+
+create_country_leader = {
+	name = "The Pentarchy"
+	desc = ""
+	picture = "Pentarchy_WIP.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "CatBeard the Tyranical"
+
+	picture = "CatBeard.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Gilda"
+	desc = ""
+	picture = "Gilda.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "A Disjointed Rabble"
+	desc = ""
+	picture = "Fallen_govt.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+
+	}
+}
+
+create_field_marshal = {
+	name = "CatBeard"
+	picture = "CatBeard.dds"
+	traits = { invader infantry_leader inflexible_strategist trait_mountaineer harsh_leader  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Lunar_Explorator"
+	picture = "Lunar_Explorator.dds"
+	traits = {}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Alter"
+	picture = "Alter.dds"
+	traits = {}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Hotroman"
+	picture = "Hotroman.dds"
+	traits = {}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Whyareall"
+	picture = "Whyareall.dds"
+	traits = { hill_fighter trait_mountaineer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Chad Spike"
+	picture = "Chad_Spike.dds"
+	traits = { trait_reckless organizer skilled_staffer }
+	skill = 1
+	id = 10100
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
