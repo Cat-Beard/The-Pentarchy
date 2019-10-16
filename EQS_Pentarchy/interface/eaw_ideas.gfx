@@ -4855,4 +4855,8 @@ SpriteType = {
 		name = "GFX_idea_The_Pentarchy"
 		texturefile = "gfx/interface/ideas/PentarchyNatSpirit.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_race_war"
+		texturefile = "gfx/interface/ideas/FRE_infantry_equipment_manufacturer.dds"
+	}
 }

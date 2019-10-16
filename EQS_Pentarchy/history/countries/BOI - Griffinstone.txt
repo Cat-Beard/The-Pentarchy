@@ -1,6 +1,6 @@
 ﻿capital = 389
 oob = "BOI_1007"
-set_research_slots = 4
+set_research_slots = 3
 
 set_technology = {
 	griffon_race = 1
@@ -105,7 +105,7 @@ create_country_leader = {
 create_field_marshal = {
 	name = "CatBeard"
 	picture = "CatBeard.dds"
-	traits = { invader infantry_leader inflexible_strategist trait_mountaineer harsh_leader  }
+	traits = {promising_general supply_raider war_hero infantry_officer logistics_wizard naval_invader}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2

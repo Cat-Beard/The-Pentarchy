@@ -27,6 +27,56 @@ ideas = {
 	#}
 
 	########## WIP Ideas
+
+	country = {
+		state_railroad_initiative = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+	}
+	country = {
+		state_railroad_initiative2 = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.30
+			}
+		}
+	}
+	country = {
+		undead_workforce = {
+			modifier = {
+				local_resources_factor = 0.2
+			}
+		}
+	}
+	country = {
+		undead_workforce2 = {
+			modifier = {
+				local_resources_factor = 0.2
+				industrial_capacity_factory = 0.1
+				conscription = 0.01
+			}
+		}
+	}
+	country = {
+		education_initiative = {
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+	country = {
+		maarite_intellectuals = {
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = -0.10
+			}
+		}
+	}
+
+
+
+#####################################
 	country = {
 		idol_of_boreas_lost = {
 
@@ -52,7 +102,15 @@ ideas = {
 			}
 		}
 	}
-
+	country = {
+		race_war = {
+			modifier = {
+				justify_war_goal_time = -0.75
+				generate_wargoal_tension = -1
+			}
+		}
+	}
+	
 	political_advisor = {
 		Shadowninjaman11 = {
 			picture = Shadowninjaman11

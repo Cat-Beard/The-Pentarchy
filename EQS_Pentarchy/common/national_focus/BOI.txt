@@ -28,7 +28,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_political_effort"
-			add_political_power = 150
+			add_political_power = 165````
 		}
 		ai_will_do = {
 			factor = 3
@@ -623,6 +623,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = race_war
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_the_old_ways"
 			if = {
 				limit = { has_completed_focus = griffon_noble_birthright }
@@ -913,7 +914,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = industry
 			}
 		}
@@ -948,10 +949,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -981,10 +982,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1018,75 +1019,20 @@ focus_tree = {
 			}
 		}
 
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_roads"
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+			add_ideas = state_railroad_initiative
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
+				
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 1
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
+			
+			
 		}
 	}
 
@@ -1098,7 +1044,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = griffon_roads
 
-		cost = 20
+		cost = 10
 
 		ai_will_do = {
 			factor = 2
@@ -1118,13 +1064,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_boost_economy"
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
+			add_ideas = undead_workforce
 			decrease_poverty = yes
+			add_stability = -0.05
 		}
 	}
 
@@ -1183,10 +1125,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1217,11 +1159,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		bypass = {
-			NOT = { has_idea = poor_science_base }
-			NOT = { has_illiteracy = yes }
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1238,6 +1175,7 @@ focus_tree = {
 				add_ideas = better_science_base
 			}
 			decrease_illiteracy = yes
+			add_ideas = education_initiative
 		}
 	}
 
@@ -1256,75 +1194,11 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = infrastructure_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = infrastructure
-						size < 1
-					}
-				}
-			}
-		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_railway"
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 1
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
+			
+			swap_ideas = { remove_idea = state_railroad_initiative add_idea = state_railroad_initiative2 }
 			decrease_poverty = yes
 		}
 	}
@@ -1385,10 +1259,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1419,12 +1293,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_industrial_effort_ii"
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
+			swap_ideas = { remove_idea = undead_workforce add_idea = undead_workforce2 }
+			add_stability = -0.05
+			add_war_support = -0.05
 			decrease_poverty = yes
 			if = {
 				limit = { has_idea = pre_industrial_society }
@@ -1466,32 +1337,10 @@ focus_tree = {
 				}
 			}
 		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_new_factories"
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1499,7 +1348,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 			decrease_poverty = yes
 		}
 	}
@@ -1527,17 +1375,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_modernise_society"
-			if = {
-				limit = { has_idea = outdated_industry }
-				add_ideas = modern_society
+			random_owned_controlled_state = {
+				
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
 			}
-			else_if = {
-				limit = { has_idea = pre_industrial_society }
-				add_ideas = outdated_industry
-			}
+
+			add_ideas = modern_society
 		}
 	}
-
 	focus = {
 		id = griffon_science_effort
 		icon = GFX_focus_research
@@ -1556,11 +1411,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		bypass = {
-			NOT = { has_idea = better_science_base }
-			NOT = { has_illiteracy = yes }
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1571,11 +1421,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_science_effort"
-			hidden_effect = { set_country_flag = big_science_base_unlocked }
-			if = {
-				limit = { has_idea = better_science_base }
-				add_ideas = big_science_base
-			}
+			add_ideas = maarite_intellectuals
 			decrease_illiteracy = yes
 		}
 	}
@@ -1610,11 +1456,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_science_effort_ii"
-			hidden_effect = { set_country_flag = proper_science_base_unlocked }
+			hidden_effect = { set_country_flag = big_science_base_unlocked }
 			if = {
-				limit = { has_idea = big_science_base }
-				add_ideas = proper_science_base
+				limit = { has_idea = better_science_base }
+				add_ideas = big_science_base
 			}
+			add_research_slot = 1
 			decrease_illiteracy = yes
 		}
 	}
@@ -1636,7 +1483,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus griffon_universities"
-			add_research_slot = 1
+			hidden_effect = { set_country_flag = proper_science_base_unlocked }
+			if = {
+				limit = { has_idea = big_science_base }
+				add_ideas = proper_science_base
+			}
+			random_owned_controlled_state = {
+				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
 			decrease_illiteracy = yes
 		}
 	}
@@ -1702,10 +1562,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -1735,10 +1595,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1775,10 +1635,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -1808,10 +1668,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1848,10 +1708,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -1881,10 +1741,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
