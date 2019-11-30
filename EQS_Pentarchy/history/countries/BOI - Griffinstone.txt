@@ -116,6 +116,7 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Lunar_Explorator"
 	picture = "Lunar_Explorator.dds"
+	desc = lunarexpdesc
 	traits = {}
 	skill = 2
 	attack_skill = 2
