@@ -11,8 +11,8 @@ country_event = {
 	is_triggered_only = yes
 	#fire_only_once = yes
 
-	immediate = {
-
+	option = {
+		name = pentarchy.1.a
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		add_popularity = { ideology = fascism popularity = 0.4 }
 		remove_idea = idol_of_boreas_lost
