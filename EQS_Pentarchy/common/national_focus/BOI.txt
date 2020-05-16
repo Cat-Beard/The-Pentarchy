@@ -976,3 +976,22 @@ focus = {
 
 ###
 }
+############################################################ Air Tree
+
+focus = {
+		id = BOI_air_theory
+		icon = GFX_focus_generic_eagle
+		cost = 10
+		ai_will_do = ( factor = 3 )
+		x = 
+		y = 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BOI_air_theory"
+			set_technology = {
+				air_superiority = 1
+				formation_flying = 1
+				force_rotation = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
