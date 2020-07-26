@@ -973,9 +973,72 @@ focus = {
 			}
 		}
 	}
+############################################################ Army Tree
 
-###
-}
+	focus = {
+		id = new_army
+		icon = GFX_focus_generic_eagle
+		cost = 5
+		ai_will_do = ( factor = 1 )
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BOI_army_theory"
+			army_experience = 25
+			}
+	}
+
+	focus = { ###### Armored car subtree 
+		id = toyoda_research
+		icon = GFX_focus_generic_eagle 
+		cost = 5
+		ai_will_do = ( factor = 1 )
+		relative_position_id = new_army
+		prerequisite = { focus = new_army }
+		x = 1
+		y = 1
+
+		mutually_exclusive = {
+			focus = think_hard
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BOI_army_theory"
+			add_tech_bonus = {
+				name = motorized_bonus
+				uses = 1
+				bonus = 3.0
+				category = motorized_equipment
+			}
+		}
+	}
+	
+
+
+	focus = { ###### GBP subtree 
+		id = think_hard
+		icon = GFX_focus_generic_eagle 
+		cost = 5
+		ai_will_do = ( factor = 1 )
+		prerequisite = { focus = new_army }
+		relative_position_id = new_army
+		x = -1
+		y = 1
+
+		mutually_exclusive = {
+			focus = toyoda_research
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus think_hard"
+			set_technology = {
+				trench_warfare = 1
+				grand_battle_plan = 1
+				prepared_defense = 1
+			}
+			}
+		}
+
 ############################################################ Air Tree
 
 focus = {
@@ -983,8 +1046,8 @@ focus = {
 		icon = GFX_focus_generic_eagle
 		cost = 10
 		ai_will_do = ( factor = 3 )
-		x = 
-		y = 
+		x = 0
+		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BOI_air_theory"
 			set_technology = {
@@ -996,3 +1059,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 #REMEMBER TO ADD FOCUS DESCRIPTIONS IN LOCALIZATION UNDER BOI FILE
+
+
+###
+}
